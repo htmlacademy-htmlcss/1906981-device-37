@@ -48,6 +48,7 @@ body {
   font-weight: normal;
   line-height: 30px;
   color: var(--basic-black);
+  background-color: var(--basic-white);
 }
 
 .title {
@@ -127,6 +128,39 @@ body {
   color: var(--basic-black);
 }
 
+.categories-link::before {
+  content: "";
+  display: block;
+  width: 160px;
+  height: 160px;
+  background-color: var(--special-yellow-light);
+  background-repeat: no-repeat;
+}
+
+.categories-link-vr::before {
+  background-image: url("../images/index/categories/categories-vr.svg");
+}
+
+.categories-link-monopodes::before {
+  background-image: url("../images/index/categories/categories-monopode.svg");
+}
+
+.categories-link-cameras::before {
+  background-image: url("../images/index/categories/categories-camera.svg");
+}
+
+.categories-link-bracelets::before {
+  background-image: url("../images/index/categories/categories-fitness-bracelets.svg");
+}
+
+.categories-link-smartwatches::before {
+  background-image: url("../images/index/categories/categories-smartwatch.svg");
+}
+
+.categories-link-quadrocopters::before {
+  background-image: url("../images/index/categories/categories-quadrocopters.svg");
+}
+
 /* SERVICES */
 .services-tab-link {
   text-align: center;
@@ -134,6 +168,7 @@ body {
 
 .services-tab-link-active {
   color: var(--special-yellow-light);
+  background-color: var(--basic-black);
 }
 
 /* DELIVERY */
@@ -144,6 +179,7 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   color: var(--basic-black);
+  background-color: var(--basic-light);
 }
 
 /* ABOUT */
@@ -182,6 +218,10 @@ body {
 }
 
 /* SUBSCRIBE */
+.subscribe {
+  background-color: var(--basic-light);
+}
+
 .subscribe-description {
   color: var(--basic-dark);
 }
@@ -200,6 +240,10 @@ body {
 }
 
 /* FOOTER */
+.footer {
+  background-color: var(--basic-dark);
+}
+
 .footer-address-description {
   font-size: 16px;
   line-height: 20px;
