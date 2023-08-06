@@ -37,37 +37,97 @@
   --status-success: #08AF00;
 }
 
-html {
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  z-index: -1;
+}
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100vh;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.container {
+  width: 1160px;
+  margin: auto;
 }
 
 body {
-  font-family: "Rubik", Arial, Helvetica, sans-serif;
+  font-family: "Rubik", "Arial", sans-serif;
   font-style: normal;
   font-size: 18px;
   font-weight: normal;
   line-height: 30px;
   color: var(--basic-black);
   background-color: var(--basic-white);
+
 }
 
 .title {
-  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  margin: 0;
+
+  font-family: "Raleway", "Arial", sans-serif;
   font-size: 50px;
   font-weight: 800;
   line-height: 50px;
 }
 
 .button {
-  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  display: block;
+  font-family: "Raleway", Arial,  sans-serif;
   font-weight: 800;
   letter-spacing: 3.6px;
   text-transform: uppercase;
+  text-align: center;
   color: var(--basic-black);
   text-decoration: none;
+  cursor: pointer;
 }
 
 /* HEADER */
+.header-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-user-container {
+  display: flex;
+}
+
+.navigation-list {
+  display: flex;
+  gap: 45px;
+}
+
+.header-search {
+  display: flex;
+  width: 517px;
+
+  margin-right: auto;
+}
+
 .search-input,
 .search-submit {
   font-size: 16px;
@@ -76,10 +136,15 @@ body {
 }
 
 .search-submit {
-  font-family: "Rubik", Arial, Helvetica, sans-serif;
+  font-family: "Rubik", Arial,  sans-serif;
   font-weight: normal;
   text-transform: none;
   letter-spacing: normal;
+  width: 160px;
+}
+
+.search-input {
+  width: 359px;
 }
 
 .search-input::placeholder {
@@ -87,19 +152,34 @@ body {
   opacity: 0.3;
 }
 
+.user-list {
+  display: flex;
+}
+
 .user-link {
   color: var(--basic-black);
   text-decoration: none;
+  text-align: left;
+  display: block;
+}
+
+.user-link-login {
+  width: 231px;
 }
 
 .navigation-link {
-  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  font-family: "Raleway", Arial,  sans-serif;
   font-weight: 800;
-  line-height: auto;
+  line-height: 21px;
   letter-spacing: 3.6px;
   text-transform: uppercase;
   text-decoration: none;
   color: var(--basic-black);
+}
+
+.navigation-item-catalog {
+  margin-right: 276px;
+  width: 293px;
 }
 
 .submenu-link {
@@ -110,13 +190,11 @@ body {
 }
 
 /* MAIN */
-
-
-/* SLIDER */
-.slider-button {
-  text-align: center;
+main {
+  flex-grow: 1;
 }
 
+/* SLIDER */
 .slider-value {
   font-size: 36px;
 }
@@ -127,17 +205,21 @@ body {
 
 /* CATEGORIES */
 .categories-link {
-  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  font-family: "Raleway", Arial,  sans-serif;
   font-weight: 800;
   letter-spacing: -0.36px;
   line-height: 24px;
   text-decoration: none;
   color: var(--basic-black);
+
+  position: relative;
+  display: block;
 }
 
 .categories-link::before {
   content: "";
   display: block;
+  position: absolute;
   width: 160px;
   height: 160px;
   background-color: var(--special-yellow-light);
@@ -170,24 +252,26 @@ body {
 }
 
 /* SERVICES */
-.services-tab-link {
-  text-align: center;
-}
-
 .services-tab-link-active {
   color: var(--special-yellow-light);
   background-color: var(--basic-black);
 }
 
+.services-tab-item-active {
+  background-color: var(--basic-black);
+}
+
 /* DELIVERY */
 .delivery-link {
-  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  font-family: "Raleway", Arial,  sans-serif;
   font-size: 20px;
   letter-spacing: 4px;
   text-transform: uppercase;
   text-decoration: none;
   color: var(--basic-black);
   background-color: var(--basic-light);
+
+  position: relative;
 }
 
 /* ABOUT */
@@ -206,22 +290,23 @@ body {
   color: var(--basic-dark);
 }
 
+.contacts-info {
+  font-style: normal;
+}
+
 .address-title,
 .contacts-worktime-title {
   font-size: 24px;
-  font-style: normal;
   font-weight: 700;
   color: var(--basic-dark);
 }
 
 .address-description,
 .contacts-worktime-description {
-  font-style: normal;
   color: var(--basic-dark);
 }
 
 .address-phone {
-  font-style: normal;
   color: var(--basic-dark);
 }
 
@@ -235,7 +320,7 @@ body {
 }
 
 .subscribe-input {
-  color: var(--basic-black);
+  color: var(--basic-dark);
 }
 
 .subscribe-input::placeholder {
@@ -260,7 +345,7 @@ body {
 /* FILTER */
 .filter-title,
 .sort-title {
-  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  font-family: "Raleway", Arial,  sans-serif;
   font-size: 16px;
   font-weight: 800;
   line-height: normal;
@@ -328,9 +413,8 @@ body {
   opacity: 0.6;
 }
 
-.pagination-link-prev,
-.pagination-link-next {
-  font-family: "Raleway", Arial, Helvetica, sans-serif;
+.pagination-button {
+  font-family: "Raleway", Arial, sans-serif;
   font-weight: 800;
   line-height: normal;
   letter-spacing: 3.6px;
@@ -338,7 +422,7 @@ body {
   opacity: 1;
 }
 
-.pagination-link-disabled {
+.pagination-button-disabled {
   opacity: 0.3;
 }
 
