@@ -12,19 +12,21 @@
   <div class="page-container">
     <header class="header">
       <div class="header-container container">
-          <a class="navigation-logo" href="index.html" aria-current="page">
-            <img src="images/header/logo.svg" width="145" height="36" alt="Логотип">
+          <a class="header-logo" href="index.html" aria-current="page">
+            <svg xmlns="http://www.w3.org/2000/svg" width="145" height="36" fill="none" aria-label="Логотип."><path fill="#000" d="M27.22 0v35.3h-7.6v-2.4c-1.7 1.9-4.1 3.1-7.51 3.1C5.5 36 0 30.2 0 22.7 0 15.2 5.5 9.4 12.1 9.4c3.41 0 5.91 1.2 7.51 3.1V0h7.6Zm-7.6 22.7c0-3.8-2.5-6.2-6.01-6.2-3.5 0-6 2.4-6 6.2 0 3.8 2.5 6.2 6 6.2 3.5-.1 6-2.4 6-6.2ZM43.73 29.2c2.1 0 3.8-.8 4.8-1.9l6.1 3.5c-2.5 3.4-6.2 5.2-11 5.2-8.6 0-14.01-5.8-14.01-13.3 0-7.5 5.4-13.3 13.4-13.3 7.41 0 12.82 5.7 12.82 13.3 0 1.1-.1 2.1-.3 3H37.63c1 2.6 3.3 3.5 6.1 3.5Zm4.6-9.1c-.8-2.9-3.1-4-5.4-4-2.9 0-4.8 1.4-5.5 4h10.9ZM82.16 10.1l-9.31 25.2h-8.6l-9.31-25.2h8.4l5.3 16 5.31-16h8.2ZM83.46 10.1h7.6v25.2h-7.6V10.1ZM93.67 22.7c0-7.5 5.7-13.3 13.4-13.3 4.9 0 9.21 2.6 11.41 6.5l-6.6 3.8c-.9-1.8-2.7-2.8-4.9-2.8-3.3 0-5.71 2.4-5.71 5.8 0 3.5 2.4 5.8 5.7 5.8 2.2 0 4.1-1.1 4.9-2.8l6.61 3.8c-2.1 3.9-6.4 6.5-11.4 6.5-7.71 0-13.41-5.8-13.41-13.3ZM132.9 29.2c2.1 0 3.8-.8 4.8-1.9l6.1 3.5c-2.5 3.4-6.2 5.2-11 5.2-8.61 0-14.02-5.8-14.02-13.3 0-7.5 5.5-13.3 13.41-13.3 7.4 0 12.81 5.7 12.81 13.3 0 1.1-.1 2.1-.3 3h-17.91c1 2.6 3.3 3.5 6.1 3.5Zm4.7-9.1c-.8-2.9-3.1-4-5.4-4-2.91 0-4.81 1.4-5.51 4h10.9Z"/><path fill="#510094" d="M83.46 0v10.1L91.06 0h-7.6Z"/></svg>
           </a>
 
           <div class="header-user-container">
             <form class="header-search search" method="GET" action="https://echo.htmlacademy.ru/">
-              <label class="visually-hidden" for="search">Нажмите для поиска по сайту</label>
-              <input class="search-input" type="search" name="search" id="search" placeholder="Поиск по сайту">
+              <label class="search-label" for="search">
+                <span class="visually-hidden">Нажмите для поиска по сайту</span>
+                <input class="search-input" type="search" name="search" id="search" placeholder="Поиск по сайту">
+              </label>
               <button class="search-submit button button-dark" type="submit">Найти</button>
             </form>
 
             <ul class="user-list list-reset">
-              <li class="user-item header-user">
+              <li class="user-item">
                 <a class="user-link user-link-login" href="#">Войти</a>
               </li>
 
@@ -106,33 +108,81 @@
             <li class="slider-item slider-item-active">
               <h3 class="visually-hidden">Товар 1.</h3>
               <div class="slider-image">
-                <img src="images/index/slider/slider-1.png" width="560" height="560" alt="Квадрокоптер">
+                <img src="images/slider/slider-1.png" width="560" height="560" alt="Квадрокоптер.">
               </div>
 
               <div class="slider-content">
                 <p class="slider-title title">Порхает как бабочка, жалит как пчела!</p>
                 <p class="slider-text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-                <a class="slider-button button button-light" href="#">Подробнее</a>
+                <a class="slider-button button button-stroke" href="#">Подробнее</a>
+
+                <dl class="slider-params">
+                  <div class="slider-params-item">
+                    <dt class="slider-key">Дальность полёта</dt>
+                    <dd class="slider-value">800 м</dd>
+                  </div>
+
+                  <div class="slider-params-item">
+                    <dt class="slider-key">Радиус поражения</dt>
+                    <dd class="slider-value">50 м</dd>
+                  </div>
+                </dl>
+              </div>
+            </li>
+
+            <li class="slider-item">
+              <h3 class="visually-hidden">Товар 2.</h3>
+              <div class="slider-image">
+                <img src="images/slider/slider-2.png" width="560" height="560" alt="Фитнес-браслет.">
+              </div>
+
+              <div class="slider-content">
+                <p class="slider-title title">Худеем правильно!</p>
+                <p class="slider-text">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+                <a class="slider-button button button-stroke" href="#">Подробнее</a>
 
                 <div>
                   <dl class="slider-params">
                     <div class="slider-params-item">
-                      <dt class="slider-key">Дальность полёта</dt>
-                      <dd class="slider-value">800 м</dd>
-                    </div>
-
-                    <div class="slider-params-item">
-                      <dt class="slider-key">Радиус поражения</dt>
-                      <dd class="slider-value">50 м</dd>
+                      <dt class="slider-key">Без подзарядки</dt>
+                      <dd class="slider-value">48 часов</dd>
                     </div>
                   </dl>
                 </div>
               </div>
             </li>
 
-            <li class="slider-item"></li>
+            <li class="slider-item">
+              <h3 class="visually-hidden">Товар 3.</h3>
+              <div class="slider-image">
+                <img src="images/slider/slider-3.png" width="560" height="560" alt="Селфи-палка.">
+              </div>
 
-            <li class="slider-item"></li>
+              <div class="slider-content">
+                <p class="slider-title title">Делай селфи, как Бен Стиллер!</p>
+                <p class="slider-text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
+                <a class="slider-button button button-stroke" href="#">Подробнее</a>
+
+                <div>
+                  <dl class="slider-params">
+                    <div class="slider-params-item">
+                      <dt class="slider-key">Длина палки</dt>
+                      <dd class="slider-value">8,5 м</dd>
+                    </div>
+
+                    <div class="slider-params-item">
+                      <dt class="slider-key">Вес палки</dt>
+                      <dd class="slider-value">5 кг</dd>
+                    </div>
+
+                    <div class="slider-params-item">
+                      <dt class="slider-key">Материал</dt>
+                      <dd class="slider-value">Карбон</dd>
+                    </div>
+                  </dl>
+                </div>
+              </div>
+            </li>
           </ul>
 
           <div class="slider-arrows">
@@ -206,16 +256,16 @@
           <h2 class="visually-hidden">Услуги.</h2>
 
           <ul class="services-tabs list-reset">
-            <li class="services-tab-item services-tab-item-active button button-light">
-              <button class="services-tab-link services-tab-link-active button button-light">Доставка</button>
+            <li class="services-tab-item services-tab-item-active">
+              <button class="services-tab-link services-tab-link-active button">Доставка</button>
             </li>
 
             <li class="services-tab-item">
-              <button class="services-tab-link button button-light">Гарантия</button>
+              <button class="services-tab-link button button-stroke">Гарантия</button>
             </li>
 
             <li class="services-tab-item">
-              <button class="services-tab-link button button-light">Кредит</button>
+              <button class="services-tab-link button button-stroke">Кредит</button>
             </li>
           </ul>
 
@@ -226,13 +276,13 @@
             </li>
 
             <li class="services-content-item services-content-item-guarantee">
-              <h3 class="services-title title"></h3>
-              <p class="services-text"></p>
+              <h3 class="services-title title">Гарантия</h3>
+              <p class="services-text">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
             </li>
 
             <li class="services-content-item services-content-item-credit">
-              <h3 class="services-title title"></h3>
-              <p class="services-text"></p>
+              <h3 class="services-title title">Кредит</h3>
+              <p class="services-text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.</p>
             </li>
           </ul>
         </div>
@@ -256,7 +306,7 @@
             <li class="about-item">ТоксБерри</li>
           </ul>
 
-          <a class="about-button button button-light" href="#">Подробнее о нас</a>
+          <a class="about-button button button-stroke" href="#">Подробнее о нас</a>
         </section>
 
         <section class="contacts">
@@ -272,18 +322,15 @@
           <h3 class="contacts-worktime-title">Время работы</h3>
           <p class="contacts-worktime-description">пн—пт: с 10:00 до 22:00<br>сб—вс: с 10:00 до 19:00</p>
 
-          <a class="contacts-button button button-light" href="#">Напишите нам</a>
+          <a class="contacts-button button button-stroke" href="#">Напишите нам</a>
         </section>
       </div>
 
       <section class="subscribe">
         <div class="subscribe-container container">
-          <div class="subscribe-text-content">
             <h2 class="subscribe-title title">Подпишитесь на рассылку</h2>
             <p class="subscribe-description">Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
-          </div>
 
-          <div class="subscribe-feedback-content">
             <form class="subscribe-form" method="post" action="https://echo.htmlacademy.ru/">
               <label class="visually-hidden" for="subscribe-email">Введите ваш E-mail</label>
               <input class="subscribe-input" type="email" id="subscribe-email" name="subscribe-email" placeholder="Ваш e-mail" required>
@@ -291,7 +338,6 @@
             </form>
 
             <span class="subscribe-hint">Это бесплатно</span>
-          </div>
         </div>
       </section>
     </main>
@@ -299,7 +345,7 @@
     <footer class="footer">
       <div class="footer-container container">
         <a class="footer-logo" href="index.html" aria-current="page">
-          <img class="footer-image" src="images/footer/logo.svg" width="145" height="36" alt="Логотип">
+          <svg xmlns="http://www.w3.org/2000/svg" width="145" height="36" fill="none" aria-label="Логотип."><path fill="#FFC700" d="M27.2 0v35.3h-7.6v-2.4a9.5 9.5 0 0 1-7.5 3.1C5.5 36 0 30.2 0 22.7 0 15.2 5.5 9.4 12.1 9.4c3.4 0 6 1.2 7.5 3.1V0h7.6Zm-7.6 22.7c0-3.8-2.5-6.2-6-6.2s-6 2.4-6 6.2c0 3.8 2.5 6.2 6 6.2 3.5-.1 6-2.4 6-6.2ZM43.7 29.2c2.1 0 3.8-.8 4.8-1.9l6.1 3.5a13 13 0 0 1-11 5.2c-8.6 0-14-5.8-14-13.3C29.6 15.2 35 9.4 43 9.4c7.4 0 12.8 5.7 12.8 13.3 0 1.1 0 2.1-.3 3H37.6c1 2.6 3.3 3.5 6.1 3.5Zm4.6-9.1c-.8-2.9-3-4-5.4-4-2.9 0-4.8 1.4-5.5 4h11ZM82.2 10.1l-9.4 25.2h-8.6L55 10.1h8.4l5.3 16 5.4-16h8.2ZM83.5 10.1H91v25.2h-7.6V10.1ZM93.7 22.7A13 13 0 0 1 107 9.4a13 13 0 0 1 11.4 6.5l-6.6 3.8c-1-1.8-2.7-2.8-5-2.8a5.5 5.5 0 0 0-5.6 5.8c0 3.5 2.4 5.8 5.7 5.8 2.2 0 4-1.1 4.9-2.8l6.6 3.8A12.8 12.8 0 0 1 107 36a13 13 0 0 1-13.4-13.3ZM132.9 29.2c2 0 3.8-.8 4.8-1.9l6.1 3.5a13 13 0 0 1-11 5.2c-8.6 0-14-5.8-14-13.3a13 13 0 0 1 13.4-13.3c7.4 0 12.8 5.7 12.8 13.3 0 1.1-.1 2.1-.3 3h-18c1 2.6 3.4 3.5 6.2 3.5Zm4.7-9.1c-.8-2.9-3.1-4-5.4-4-3 0-4.8 1.4-5.5 4h10.9ZM83.5 0v10.1L91 0h-7.6Z"/></svg>
         </a>
 
         <div class="footer-content">
