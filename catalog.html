@@ -3,7 +3,10 @@
 
   <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
     <link href="styles/styles.css" rel="stylesheet">
     <title>HTML Academy: Девайс</title>
   </head>
@@ -23,7 +26,7 @@
             <form class="header-search search" method="GET" action="https://echo.htmlacademy.ru/">
               <label class="search-label" for="search">
                 <span class="visually-hidden">Нажмите для поиска по сайту</span>
-                <input class="search-input" type="search" name="search" id="search" placeholder="Поиск по сайту">
+                <input class="search-input" type="search" name="search" id="search" value="Текст поиска" placeholder="Поиск по сайту">
               </label>
               <button class="search-submit button button-dark" type="submit">Найти</button>
             </form>
@@ -169,7 +172,6 @@
                   <h3 class="filter-group-title">Стоимость</h3>
                   <div class="filter-range range">
                     <div class="range-container">
-                      <!-- Инлайновые стили для JS -->
                       <div class="range-base">
                         <div class="range-content range-content-min">
                           <input class="range-input visually-hidden" id="min" type="number" value="0" name="min" aria-label="Минимальное значение" tabindex="-1">
