@@ -877,7 +877,7 @@ img {
 }
 
 /* MAIN */
-main {
+.main {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
